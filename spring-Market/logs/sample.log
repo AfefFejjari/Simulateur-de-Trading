@@ -1,0 +1,314 @@
+2019-02-28 15:59:44.418  INFO 8016 --- [main] c.j.s.SpringMarketApplicationTests       : Starting SpringMarketApplicationTests on DESKTOP-FBUH72I with PID 8016 (started by WIKI in C:\Users\WIKI\eclipse-workspace\spring-Market)
+2019-02-28 15:59:44.423  INFO 8016 --- [main] c.j.s.SpringMarketApplicationTests       : No active profile set, falling back to default profiles: default
+2019-02-28 15:59:46.211  INFO 8016 --- [main] c.j.s.SpringMarketApplicationTests       : Started SpringMarketApplicationTests in 4.039 seconds (JVM running for 21.538)
+2019-03-04 11:04:40.136  INFO 16088 --- [main] c.j.s.SpringMarketApplication            : Starting SpringMarketApplication on DESKTOP-FBUH72I with PID 16088 (C:\Users\WIKI\eclipse-workspace\spring-Market\target\classes started by WIKI in C:\Users\WIKI\eclipse-workspace\spring-Market)
+2019-03-04 11:04:40.203  INFO 16088 --- [main] c.j.s.SpringMarketApplication            : No active profile set, falling back to default profiles: default
+2019-03-04 11:04:40.785  INFO 16088 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@365c30cc: startup date [Mon Mar 04 11:04:40 WAT 2019]; root of context hierarchy
+2019-03-04 11:04:46.173  WARN 16088 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is java.lang.NoClassDefFoundError: org/apache/juli/logging/LogFactory
+2019-03-04 11:04:46.205  INFO 16088 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2019-03-04 11:04:46.362 ERROR 16088 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is java.lang.NoClassDefFoundError: org/apache/juli/logging/LogFactory
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:137) ~[spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:537) ~[spring-context-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at com.javainuse.springMarket.SpringMarketApplication.main(SpringMarketApplication.java:14) [classes/:na]
+Caused by: java.lang.NoClassDefFoundError: org/apache/juli/logging/LogFactory
+	at org.apache.catalina.util.LifecycleBase.<clinit>(LifecycleBase.java:37) ~[tomcat-embed-core-8.0.3.jar:8.0.3]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.getEmbeddedServletContainer(TomcatEmbeddedServletContainerFactory.java:169) ~[spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.createEmbeddedServletContainer(EmbeddedWebApplicationContext.java:164) ~[spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:134) ~[spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	... 8 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.apache.juli.logging.LogFactory
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381) ~[na:1.8.0_131]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_131]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:335) ~[na:1.8.0_131]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_131]
+	... 12 common frames omitted
+
+2019-03-04 11:16:53.520  INFO 9952 --- [main] c.j.s.SpringMarketApplication            : Starting SpringMarketApplication on DESKTOP-FBUH72I with PID 9952 (C:\Users\WIKI\eclipse-workspace\spring-Market\target\classes started by WIKI in C:\Users\WIKI\eclipse-workspace\spring-Market)
+2019-03-04 11:16:53.608  INFO 9952 --- [main] c.j.s.SpringMarketApplication            : No active profile set, falling back to default profiles: default
+2019-03-04 11:16:53.748  INFO 9952 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@365c30cc: startup date [Mon Mar 04 11:16:53 WAT 2019]; root of context hierarchy
+2019-03-04 11:16:57.886  WARN 9952 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is java.lang.NoClassDefFoundError: org/apache/juli/logging/LogFactory
+2019-03-04 11:16:57.905  INFO 9952 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2019-03-04 11:16:57.962 ERROR 9952 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is java.lang.NoClassDefFoundError: org/apache/juli/logging/LogFactory
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:137) ~[spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:537) ~[spring-context-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at com.javainuse.springMarket.SpringMarketApplication.main(SpringMarketApplication.java:14) [classes/:na]
+Caused by: java.lang.NoClassDefFoundError: org/apache/juli/logging/LogFactory
+	at org.apache.catalina.util.LifecycleBase.<clinit>(LifecycleBase.java:37) ~[tomcat-embed-core-8.0.3.jar:8.0.3]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.getEmbeddedServletContainer(TomcatEmbeddedServletContainerFactory.java:169) ~[spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.createEmbeddedServletContainer(EmbeddedWebApplicationContext.java:164) ~[spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:134) ~[spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	... 8 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.apache.juli.logging.LogFactory
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381) ~[na:1.8.0_131]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_131]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:335) ~[na:1.8.0_131]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_131]
+	... 12 common frames omitted
+
+2019-03-04 11:20:54.207  INFO 11392 --- [main] c.j.s.SpringMarketApplication            : Starting SpringMarketApplication on DESKTOP-FBUH72I with PID 11392 (C:\Users\WIKI\eclipse-workspace\spring-Market\target\classes started by WIKI in C:\Users\WIKI\eclipse-workspace\spring-Market)
+2019-03-04 11:20:54.224  INFO 11392 --- [main] c.j.s.SpringMarketApplication            : No active profile set, falling back to default profiles: default
+2019-03-04 11:20:54.494  INFO 11392 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5884a914: startup date [Mon Mar 04 11:20:54 WAT 2019]; root of context hierarchy
+2019-03-04 11:20:59.085  WARN 11392 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is java.lang.NoClassDefFoundError: org/apache/juli/logging/LogFactory
+2019-03-04 11:20:59.106  INFO 11392 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2019-03-04 11:20:59.129 ERROR 11392 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is java.lang.NoClassDefFoundError: org/apache/juli/logging/LogFactory
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:137) ~[spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:537) ~[spring-context-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at com.javainuse.springMarket.SpringMarketApplication.main(SpringMarketApplication.java:14) [classes/:na]
+Caused by: java.lang.NoClassDefFoundError: org/apache/juli/logging/LogFactory
+	at org.apache.catalina.util.LifecycleBase.<clinit>(LifecycleBase.java:37) ~[tomcat-embed-core-8.0.3.jar:8.0.3]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.getEmbeddedServletContainer(TomcatEmbeddedServletContainerFactory.java:169) ~[spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.createEmbeddedServletContainer(EmbeddedWebApplicationContext.java:164) ~[spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:134) ~[spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	... 8 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.apache.juli.logging.LogFactory
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381) ~[na:1.8.0_131]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_131]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:335) ~[na:1.8.0_131]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_131]
+	... 12 common frames omitted
+
+2019-03-04 12:00:06.022  INFO 9300 --- [main] c.j.s.SpringMarketApplication            : Starting SpringMarketApplication on DESKTOP-FBUH72I with PID 9300 (C:\Users\WIKI\eclipse-workspace\spring-Market\target\classes started by WIKI in C:\Users\WIKI\eclipse-workspace\spring-Market)
+2019-03-04 12:00:06.075  INFO 9300 --- [main] c.j.s.SpringMarketApplication            : No active profile set, falling back to default profiles: default
+2019-03-04 12:00:06.340  INFO 9300 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@619713e5: startup date [Mon Mar 04 12:00:06 WAT 2019]; root of context hierarchy
+2019-03-04 12:00:09.788  WARN 9300 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is java.lang.NoClassDefFoundError: org/apache/juli/logging/LogFactory
+2019-03-04 12:00:09.822 ERROR 9300 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is java.lang.NoClassDefFoundError: org/apache/juli/logging/LogFactory
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:137) ~[spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:536) ~[spring-context-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761) [spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371) [spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186) [spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175) [spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at com.javainuse.springMarket.SpringMarketApplication.main(SpringMarketApplication.java:16) [classes/:na]
+Caused by: java.lang.NoClassDefFoundError: org/apache/juli/logging/LogFactory
+	at org.apache.catalina.util.LifecycleBase.<clinit>(LifecycleBase.java:37) ~[tomcat-embed-core-8.0.3.jar:8.0.3]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.getEmbeddedServletContainer(TomcatEmbeddedServletContainerFactory.java:167) ~[spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.createEmbeddedServletContainer(EmbeddedWebApplicationContext.java:164) ~[spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:134) ~[spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	... 8 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.apache.juli.logging.LogFactory
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381) ~[na:1.8.0_131]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_131]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:335) ~[na:1.8.0_131]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_131]
+	... 12 common frames omitted
+
+2019-03-04 12:09:56.390  INFO 3240 --- [main] c.j.s.SpringMarketApplication            : Starting SpringMarketApplication on DESKTOP-FBUH72I with PID 3240 (C:\Users\WIKI\eclipse-workspace\spring-Market\target\classes started by WIKI in C:\Users\WIKI\eclipse-workspace\spring-Market)
+2019-03-04 12:09:56.429  INFO 3240 --- [main] c.j.s.SpringMarketApplication            : No active profile set, falling back to default profiles: default
+2019-03-04 12:09:56.752  INFO 3240 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@619713e5: startup date [Mon Mar 04 12:09:56 WAT 2019]; root of context hierarchy
+2019-03-04 12:10:00.207  WARN 3240 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is java.lang.NoClassDefFoundError: org/apache/juli/logging/LogFactory
+2019-03-04 12:10:00.223 ERROR 3240 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is java.lang.NoClassDefFoundError: org/apache/juli/logging/LogFactory
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:137) ~[spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:536) ~[spring-context-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761) [spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371) [spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186) [spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175) [spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at com.javainuse.springMarket.SpringMarketApplication.main(SpringMarketApplication.java:15) [classes/:na]
+Caused by: java.lang.NoClassDefFoundError: org/apache/juli/logging/LogFactory
+	at org.apache.catalina.util.LifecycleBase.<clinit>(LifecycleBase.java:37) ~[tomcat-embed-core-8.0.3.jar:8.0.3]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.getEmbeddedServletContainer(TomcatEmbeddedServletContainerFactory.java:167) ~[spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.createEmbeddedServletContainer(EmbeddedWebApplicationContext.java:164) ~[spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:134) ~[spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	... 8 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.apache.juli.logging.LogFactory
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381) ~[na:1.8.0_131]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_131]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:335) ~[na:1.8.0_131]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_131]
+	... 12 common frames omitted
+
+2019-03-04 12:22:48.089  INFO 14604 --- [main] c.j.s.SpringMarketApplication            : Starting SpringMarketApplication on DESKTOP-FBUH72I with PID 14604 (C:\Users\WIKI\eclipse-workspace\spring-Market\target\classes started by WIKI in C:\Users\WIKI\eclipse-workspace\spring-Market)
+2019-03-04 12:22:48.096  INFO 14604 --- [main] c.j.s.SpringMarketApplication            : No active profile set, falling back to default profiles: default
+2019-03-04 12:22:48.361  INFO 14604 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@619713e5: startup date [Mon Mar 04 12:22:48 WAT 2019]; root of context hierarchy
+2019-03-04 12:22:52.562  WARN 14604 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is java.lang.NoClassDefFoundError: org/apache/juli/logging/LogFactory
+2019-03-04 12:22:52.583 ERROR 14604 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is java.lang.NoClassDefFoundError: org/apache/juli/logging/LogFactory
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:137) ~[spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:536) ~[spring-context-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761) [spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371) [spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186) [spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175) [spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at com.javainuse.springMarket.SpringMarketApplication.main(SpringMarketApplication.java:15) [classes/:na]
+Caused by: java.lang.NoClassDefFoundError: org/apache/juli/logging/LogFactory
+	at org.apache.catalina.util.LifecycleBase.<clinit>(LifecycleBase.java:37) ~[tomcat-embed-core-8.0.3.jar:8.0.3]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.getEmbeddedServletContainer(TomcatEmbeddedServletContainerFactory.java:167) ~[spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.createEmbeddedServletContainer(EmbeddedWebApplicationContext.java:164) ~[spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:134) ~[spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	... 8 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.apache.juli.logging.LogFactory
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381) ~[na:1.8.0_131]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_131]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:335) ~[na:1.8.0_131]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_131]
+	... 12 common frames omitted
+
+2019-03-04 14:52:24.723  INFO 13308 --- [main] c.j.s.SpringMarketApplication            : Starting SpringMarketApplication on DESKTOP-FBUH72I with PID 13308 (C:\Users\WIKI\eclipse-workspace\spring-Market\target\classes started by WIKI in C:\Users\WIKI\eclipse-workspace\spring-Market)
+2019-03-04 14:52:24.924  INFO 13308 --- [main] c.j.s.SpringMarketApplication            : No active profile set, falling back to default profiles: default
+2019-03-04 14:52:25.252  INFO 13308 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@619713e5: startup date [Mon Mar 04 14:52:25 WAT 2019]; root of context hierarchy
+2019-03-04 14:52:29.247  WARN 13308 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is java.lang.NoClassDefFoundError: org/apache/juli/logging/LogFactory
+2019-03-04 14:52:29.305 ERROR 13308 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is java.lang.NoClassDefFoundError: org/apache/juli/logging/LogFactory
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:137) ~[spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:536) ~[spring-context-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761) [spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371) [spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186) [spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175) [spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at com.javainuse.springMarket.SpringMarketApplication.main(SpringMarketApplication.java:15) [classes/:na]
+Caused by: java.lang.NoClassDefFoundError: org/apache/juli/logging/LogFactory
+	at org.apache.catalina.util.LifecycleBase.<clinit>(LifecycleBase.java:37) ~[tomcat-embed-core-8.0.3.jar:8.0.3]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.getEmbeddedServletContainer(TomcatEmbeddedServletContainerFactory.java:167) ~[spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.createEmbeddedServletContainer(EmbeddedWebApplicationContext.java:164) ~[spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:134) ~[spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	... 8 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.apache.juli.logging.LogFactory
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381) ~[na:1.8.0_131]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_131]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:335) ~[na:1.8.0_131]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_131]
+	... 12 common frames omitted
+
+2019-03-04 14:54:18.477  INFO 16308 --- [main] c.j.s.SpringMarketApplication            : Starting SpringMarketApplication on DESKTOP-FBUH72I with PID 16308 (C:\Users\WIKI\eclipse-workspace\spring-Market\target\classes started by WIKI in C:\Users\WIKI\eclipse-workspace\spring-Market)
+2019-03-04 14:54:18.486  INFO 16308 --- [main] c.j.s.SpringMarketApplication            : No active profile set, falling back to default profiles: default
+2019-03-04 14:54:18.672  INFO 16308 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@619713e5: startup date [Mon Mar 04 14:54:18 WAT 2019]; root of context hierarchy
+2019-03-04 14:54:23.029  WARN 16308 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is java.lang.NoClassDefFoundError: org/apache/juli/logging/LogFactory
+2019-03-04 14:54:23.050 ERROR 16308 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is java.lang.NoClassDefFoundError: org/apache/juli/logging/LogFactory
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:137) ~[spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:536) ~[spring-context-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761) [spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371) [spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186) [spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175) [spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at com.javainuse.springMarket.SpringMarketApplication.main(SpringMarketApplication.java:15) [classes/:na]
+Caused by: java.lang.NoClassDefFoundError: org/apache/juli/logging/LogFactory
+	at org.apache.catalina.util.LifecycleBase.<clinit>(LifecycleBase.java:37) ~[tomcat-embed-core-8.0.3.jar:8.0.3]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.getEmbeddedServletContainer(TomcatEmbeddedServletContainerFactory.java:167) ~[spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.createEmbeddedServletContainer(EmbeddedWebApplicationContext.java:164) ~[spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:134) ~[spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	... 8 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.apache.juli.logging.LogFactory
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381) ~[na:1.8.0_131]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_131]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:335) ~[na:1.8.0_131]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_131]
+	... 12 common frames omitted
+
+2019-03-04 15:30:01.557  INFO 12100 --- [main] c.j.s.SpringMarketApplication            : Starting SpringMarketApplication on DESKTOP-FBUH72I with PID 12100 (C:\Users\WIKI\eclipse-workspace\spring-Market\target\classes started by WIKI in C:\Users\WIKI\eclipse-workspace\spring-Market)
+2019-03-04 15:30:01.636  INFO 12100 --- [main] c.j.s.SpringMarketApplication            : No active profile set, falling back to default profiles: default
+2019-03-04 15:30:01.888  INFO 12100 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@17baae6e: startup date [Mon Mar 04 15:30:01 WAT 2019]; root of context hierarchy
+2019-03-04 15:30:04.305  INFO 12100 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'beanNameViewResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2019-03-04 15:30:07.550  INFO 12100 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 9000 (http)
+2019-03-04 15:30:07.693  INFO 12100 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2019-03-04 15:30:07.706  INFO 12100 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.3
+2019-03-04 15:30:09.321  INFO 12100 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-03-04 15:30:09.322  INFO 12100 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 7446 ms
+2019-03-04 15:30:11.197  INFO 12100 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-03-04 15:30:11.199  INFO 12100 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-03-04 15:30:11.200  INFO 12100 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-03-04 15:30:11.200  INFO 12100 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'requestContextFilter' to: [/*]
+2019-03-04 15:30:11.203  INFO 12100 --- [localhost-startStop-1] .e.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2019-03-04 15:30:11.203  INFO 12100 --- [localhost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2019-03-04 15:30:12.228  INFO 12100 --- [localhost-startStop-1] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.css'], []
+2019-03-04 15:30:12.230  INFO 12100 --- [localhost-startStop-1] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.js'], []
+2019-03-04 15:30:12.448  INFO 12100 --- [localhost-startStop-1] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5de26105, org.springframework.security.web.context.SecurityContextPersistenceFilter@135bf7e, org.springframework.security.web.header.HeaderWriterFilter@63e5d01d, org.springframework.security.web.csrf.CsrfFilter@6a5bf1ff, org.springframework.security.web.authentication.logout.LogoutFilter@67d66540, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1dd5a9ed, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7eaaa9f3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@52775395, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@37e30e77, org.springframework.security.web.session.SessionManagementFilter@4d26a20e, org.springframework.security.web.access.ExceptionTranslationFilter@1c780052, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@40b4b0ee]
+2019-03-04 15:30:12.972  INFO 12100 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@17baae6e: startup date [Mon Mar 04 15:30:01 WAT 2019]; root of context hierarchy
+2019-03-04 15:30:13.123  INFO 12100 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dashboard],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.javainuse.springMarket.controller.DashboardController.dashboard()
+2019-03-04 15:30:13.138  INFO 12100 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-03-04 15:30:13.139  INFO 12100 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-03-04 15:30:13.194  INFO 12100 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2019-03-04 15:30:13.195  INFO 12100 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/login] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2019-03-04 15:30:13.217  INFO 12100 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/*.js/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-03-04 15:30:13.218  INFO 12100 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/*.css/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-03-04 15:30:13.218  INFO 12100 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-03-04 15:30:13.218  INFO 12100 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-03-04 15:30:13.304  INFO 12100 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-03-04 15:30:14.039  INFO 12100 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-03-04 15:30:14.843  INFO 12100 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 9000 (http)
+2019-03-04 15:30:14.854  INFO 12100 --- [main] c.j.s.SpringMarketApplication            : Started SpringMarketApplication in 14.137 seconds (JVM running for 15.329)
+2019-03-04 15:31:36.589  INFO 12100 --- [http-nio-9000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-03-04 15:31:36.589  INFO 12100 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-03-04 15:31:36.729  INFO 12100 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 139 ms
+2019-03-05 10:21:12.940  INFO 7692 --- [main] c.j.s.SpringMarketApplication            : Starting SpringMarketApplication on DESKTOP-FBUH72I with PID 7692 (C:\Users\WIKI\eclipse-workspace\spring-Market\target\classes started by WIKI in C:\Users\WIKI\eclipse-workspace\spring-Market)
+2019-03-05 10:21:13.029  INFO 7692 --- [main] c.j.s.SpringMarketApplication            : No active profile set, falling back to default profiles: default
+2019-03-05 10:21:13.456  INFO 7692 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@17baae6e: startup date [Tue Mar 05 10:21:13 WAT 2019]; root of context hierarchy
+2019-03-05 10:21:16.259  INFO 7692 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'beanNameViewResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2019-03-05 10:21:18.415  INFO 7692 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 9000 (http)
+2019-03-05 10:21:18.507  INFO 7692 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2019-03-05 10:21:18.519  INFO 7692 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.3
+2019-03-05 10:21:19.428  INFO 7692 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-03-05 10:21:19.429  INFO 7692 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5979 ms
+2019-03-05 10:21:20.431  INFO 7692 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-03-05 10:21:20.443  INFO 7692 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-03-05 10:21:20.444  INFO 7692 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-03-05 10:21:20.444  INFO 7692 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'requestContextFilter' to: [/*]
+2019-03-05 10:21:20.448  INFO 7692 --- [localhost-startStop-1] .e.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2019-03-05 10:21:20.449  INFO 7692 --- [localhost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2019-03-05 10:21:21.545  INFO 7692 --- [localhost-startStop-1] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.css'], []
+2019-03-05 10:21:21.546  INFO 7692 --- [localhost-startStop-1] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/*.js'], []
+2019-03-05 10:21:21.819  INFO 7692 --- [localhost-startStop-1] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@67f8ad95, org.springframework.security.web.context.SecurityContextPersistenceFilter@1efb7d6b, org.springframework.security.web.header.HeaderWriterFilter@4f847e22, org.springframework.security.web.csrf.CsrfFilter@1923ee7b, org.springframework.security.web.authentication.logout.LogoutFilter@5aa0bb08, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@361a32a4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@363c8bea, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@69126ee1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@249795ba, org.springframework.security.web.session.SessionManagementFilter@1e599b64, org.springframework.security.web.access.ExceptionTranslationFilter@6e2036c3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1d505516]
+2019-03-05 10:21:22.346  INFO 7692 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@17baae6e: startup date [Tue Mar 05 10:21:13 WAT 2019]; root of context hierarchy
+2019-03-05 10:21:22.818  INFO 7692 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dashboard],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.javainuse.springMarket.controller.DashboardController.dashboard()
+2019-03-05 10:21:22.863  INFO 7692 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-03-05 10:21:22.864  INFO 7692 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-03-05 10:21:22.962  INFO 7692 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2019-03-05 10:21:22.963  INFO 7692 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/login] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2019-03-05 10:21:23.004  INFO 7692 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/*.js/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-03-05 10:21:23.004  INFO 7692 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/*.css/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-03-05 10:21:23.004  INFO 7692 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-03-05 10:21:23.004  INFO 7692 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-03-05 10:21:23.246  INFO 7692 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-03-05 10:21:24.171  INFO 7692 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-03-05 10:21:25.721  INFO 7692 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 9000 (http)
+2019-03-05 10:21:25.740  INFO 7692 --- [main] c.j.s.SpringMarketApplication            : Started SpringMarketApplication in 13.918 seconds (JVM running for 15.034)
+2019-03-05 10:21:56.101  INFO 7692 --- [http-nio-9000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-03-05 10:21:56.101  INFO 7692 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-03-05 10:21:56.307  INFO 7692 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 205 ms
