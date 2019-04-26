@@ -1,0 +1,202 @@
+<div class="group">
+    <div class="box left simtradeleft">
+        <div class="title">
+            <h2>Order Stock</h2>
+        </div>
+        <form name="simTrade" id="orderForm" method="post" action="">
+            <input type="hidden" name="formToken" value="2f6f650b27cd41bc231040e9ffdea38a">
+            <table class="table2 order previeworder-table">
+                <tbody>
+                <tr>
+                    <th>Stock Symbol</th>
+                    <td>
+                        <link href="https://i.investopedia.com/public/simulator/css/Ajax/Stock/AutoSuggestBox.css" type="text/css" rel="stylesheet">
+                        <script type="text/javascript" language="JavaScript" src="https://i.investopedia.com/public/simulator/js/Ajax/Stock/AutoSuggestBox.js?v=201805230915"></script>
+                        <script language="javascript">
+                            var ASB_GET_DATA_URL='https://www.investopedia.com/simulator/ajax/stock/getautosuggestdata.aspx';
+                        </script>
+                        <!--下面用js绑定了onBlur事件-->
+                        <input value="" name="symbolTextbox" type="text" onkeypress="asbOnKeyPress(event);" id="symbolTextbox" title="Enter company name or symbol" onblur="asbHideDiv('divMenu_symbolTextbox');" onkeydown="if (event.keyCode == 13) { event.returnValue = false; event.cancel = true; $('#previewButton').trigger('click'); } asbOnKeyDown('symbolTextbox', 'divMenu_symbolTextbox', event);" onkeyup="asbOnKeyUp('symbolTextbox', 'divMenu_symbolTextbox', 'Stock', event);" autocomplete="off" onfocus="$('.panel.symbol .inner').fadeIn();" style="width:120px;">
+                        <div class="asbMenu" style="display:none" id="divMenu_symbolTextbox"></div>
+
+                        <!--值是通过/Ajax/Stock/AutoSuggestBox.js 用事件写的-->
+                        <input type="hidden" id="symbolTextbox_SelectedValue" name="selectedValue" value="">
+
+
+                        <!--<input type="text" onfocus="$('.panel.symbol .inner').fadeIn();" style="width:120px;">-->
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <a class="help-text" href="#" id="hlSymLookup">Symbol Lookup</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>Transaction</th>
+                    <td>
+                        <select name="transactionTypeDropDown" id="transactionTypeDropDown" style="width: auto;">
+                            <option value="1">Buy</option>
+                            <option value="2">Sell</option>
+                            <option value="3">Sell Short</option>
+                            <option value="4">Buy to Cover</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Quantity</th>
+                    <td>
+                        <input value="" name="quantityTextbox" type="text" maxlength="6" id="quantityTextbox">
+
+                        &nbsp;
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="#" id="showMaxLink" title="Total maximum number of shares that can be purchased" class="help-text">Show Max</a>
+                                                                        <div id="limitControlPanel" class="trade_row2" style="display:none">
+                            <div id="limitDiv" class="trade_txt">
+                                <span id="limitationLabel">
+                                                                    </span>
+                            </div>
+                        </div>
+                        
+                        <input type="hidden" name="isShowMax" id="isShowMax" value="0">
+                        <script type="text/javascript">
+                            function showMax($)
+                            {
+                                if($('#symbolTextbox').val() != '')
+                                {
+                                    $('#showMaxLink').css('display','none');
+                                    $('#limitControlPanel').css('display','');
+                                    $('#limitationLabel').html("");
+                                    $.ajax({
+                                        type: "Post",
+                                        url: 'https://www.investopedia.com/simulator/trade/tradestock.aspx',
+                                        data: "isShowMax=1&symbolTextbox="+$('#symbolTextbox').val()+"&action=showMax",
+                                        success: function(html){
+                                            if(html != 'false')
+                                            {
+                                                $('#limitationLabel').html(html);
+                                            }
+                                        }
+                                    });
+                                }
+                            }
+                            (function($){
+                                $('#showMaxLink').click(function(){
+                                    showMax($);
+
+                                    /*
+                                    无意义代码地下，因为这个是隐藏域
+                                     */
+                                    $('#symbolTextbox').blur(function(){
+                                        showMax($);
+                                    });
+                                    return false;
+                                });
+                            })(jQuery);
+                        </script>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>Price</th>
+                    <td class="order-group">
+                        <label>
+                            <input id="marketPriceRadioButton" type="radio" name="Price" value="Market" checked="checked">
+                            Market
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td class="order-group">
+                        <label>
+                            <input id="limitRadioButton" type="radio" name="Price" value="Limit">
+                            Limit
+                        </label>$
+                        <input name="limitPriceTextBox" type="text" maxlength="7" id="limitPriceTextBox">
+                    </td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td class="order-group">
+                        <label>
+                            <input id="stopRadioButton" type="radio" name="Price" value="Stop">
+                            Stop
+                        </label>$
+                        <input name="stopPriceTextBox" type="text" maxlength="7" id="stopPriceTextBox">
+                    </td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td class="order-group">
+                        <div id="divTrailStop" style="display:none">
+                            <div style="float: left;padding: 8px 0 0 4px;width: 104px;">
+                                <input style="margin-right: 4px;" id="tStopRadioButton" type="radio" name="Price" value="TStop">Trailing Stop
+                            </div>
+                            <div id="divTStop" style="padding: 2px 4px!important;overflow: hidden;zoom: 1; display:none">
+                                <div style="float: left;margin: 6px 0 0;width: 30px;">
+                                    <input style="margin-right: 4px;" id="tStopPRCRadioButton" type="radio" name="TPrice" value="TrailStopAtPercentage">%
+                                </div>
+                                <div style="overflow: hidden;clear: right">
+                                    <input style="width: 57px!important;" name="tStopPRCTextBox" type="text" maxlength="7" id="tStopPRCTextBox">
+                                </div>
+                                <div style="float: left;margin: 6px 0 0;width: 30px;">
+                                    <input style="margin-right: 4px;" id="tStopVALRadioButton" type="radio" name="TPrice" value="TrailStopAtValue">$
+                                </div>
+                                <div style="overflow: hidden;clear: right">
+                                    <input style="width: 57px!important;" name="tStopVALTextBox" type="text" maxlength="7" id="tStopVALTextBox">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>Duration</th>
+                    <td>
+                        <select name="durationTypeDropDown" id="durationTypeDropDown" style="width: auto;">
+                            <option value="1">Day Order</option>
+                            <option selected="selected" value="2">Good Till Cancelled</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td>
+                        <input checked="checked" id="sendConfirmationEmailCheckBox" type="checkbox" name="sendConfirmationEmailCheckBox">&nbsp;&nbsp;Send&nbsp;Confirmation&nbsp;Email/Message&nbsp;
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+    <div class="box right simtradeleft">
+    
+    <div class="title">
+        <h2>Account Details</h2>
+    </div>
+    <table class="table2 order">
+        <tbody>
+                <tr>
+            <th>Value (USD)</th>
+            <td class="value num">$100,000.00</td>
+        </tr>
+        <tr>
+            <th>Buying Power</th>
+            <td class="value num">$100,000.00</td>
+        </tr>
+        <tr>
+            <th>Cash</th>
+            <td class="value num">$100,000.00</td>
+        </tr>
+                </tbody>
+    </table>
+
+    <div class="center previewbox" id="divForQuote">
+
+    </div>
+    </div>
+
+
+</div>
