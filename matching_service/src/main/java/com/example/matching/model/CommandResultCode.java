@@ -14,7 +14,7 @@ public enum CommandResultCode {
 
     RISK_NSF(-2001),
 
-    // MATCHING_NO_LIQUIDITY(-3001), // ?? order can be applied partially
+    
     MATCHING_INVALID_ORDER_ID(-3002),
 
     USER_MGMT_USER_ALREADY_EXISTS(-4001),

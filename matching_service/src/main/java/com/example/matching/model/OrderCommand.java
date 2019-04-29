@@ -25,10 +25,10 @@ public class OrderCommand {
 
     public long orderId;
     public int symbol;
-    public long price;  // optional for move
+    public long price;  
     public long size;
 
-    // required for PLACE_ORDER only;
+   
     public OrderAction action;
     public OrderType orderType;
 
@@ -36,18 +36,15 @@ public class OrderCommand {
 
     public long timestamp;
 
-    // ---- false sharing section ------
-
+    
     public long eventsGroup;
 
-    // result code of command execution - can also be used for saving intermediate state
+    
     public CommandResultCode resultCode;
 
     public MatcherTradeEvent matcherEvent;
 
-    // sequence of last available for this command
-    //public long matcherEventSequence;
-    // ---- potential false sharing section ------
+   
 
     public static OrderCommand limitOrder(long orderId, int uid, long price, long size, OrderAction action) {
         OrderCommand cmd = new OrderCommand();
@@ -105,12 +102,6 @@ public class OrderCommand {
         }
     }
 
-    /**
-     * Produces garbage
-     * For testing only !!!
-     *
-     * @return
-     */
     public List<MatcherTradeEvent> extractEvents() {
         List<MatcherTradeEvent> list = new ArrayList<>();
         processMatherEvents(list::add);
@@ -130,11 +121,7 @@ public class OrderCommand {
 //
 
 
-    /**
-     * Write only command data, not status or events
-     *
-     * @param cmd2
-     */
+    
     public void writeTo(OrderCommand cmd2) {
         cmd2.command = this.command;
         cmd2.orderId = this.orderId;

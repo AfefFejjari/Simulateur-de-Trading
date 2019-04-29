@@ -5,9 +5,9 @@ import java.util.Objects;
 import com.example.matching.model.EqualsBuilder;
 import com.example.matching.model.MatcherTradeEvent;
 
-//reference to next event in chain
+
 public MatcherTradeEvent nextEvent;
-//testing only
+
 public class MatcherTradeEventservice {
 	public MatcherTradeEvent copy() {
         MatcherTradeEvent evt = new MatcherTradeEvent();
@@ -25,9 +25,7 @@ public class MatcherTradeEventservice {
         return evt;
     }
 
-	/**
-     * Compare next events chain as well.
-     */
+	
     @Override
     public boolean equals(Object o) {
         if (o == this) return true;
@@ -45,14 +43,12 @@ public class MatcherTradeEventservice {
                 .append(matchedOrderCompleted, other.matchedOrderCompleted)
                 .append(price, other.price)
                 .append(size, other.size)
-                // ignore timestamp
+                
                 .append(nextEvent, other.nextEvent)
                 .isEquals();
     }
 
-    /**
-     * Includes chaining events
-     */
+    
     @Override
     public int hashCode() {
         return Objects.hash(
