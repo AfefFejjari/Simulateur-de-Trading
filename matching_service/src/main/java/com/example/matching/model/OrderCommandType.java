@@ -2,26 +2,22 @@ package com.example.matching.model;
 
 import lombok.Getter;
 
-@Getter
+
+@Getter 
 public enum OrderCommandType {
-    PLACE_ORDER(1),
-    CANCEL_ORDER(2),
-    MOVE_ORDER(3),
+    PLACE_ORDER,
+    CANCEL_ORDER,
+    MOVE_ORDER,
 
-    ORDER_BOOK_REQUEST(6),
+    ORDER_BOOK_REQUEST,
 
-    ADD_USER(10),
-    BALANCE_ADJUSTMENT(11),
+    ADD_USER,
+    BALANCE_ADJUSTMENT,
 
-    CLEARING_OPERATION(30),
+    CLEARING_OPERATION,
 
-    NOP(120),
-    SHUTDOWN_SIGNAL(127);
+    NOP,
+    SHUTDOWN_SIGNAL;
 
-    private byte code;
-
-    OrderCommandType(int code) {
-        this.code = (byte) code;
-    }
-
+  
 }

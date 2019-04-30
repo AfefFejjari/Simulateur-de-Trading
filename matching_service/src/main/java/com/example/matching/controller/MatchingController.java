@@ -2,13 +2,14 @@ package com.example.matching.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import  com.example.matching.service.Matchingservice;
+import com.example.matching.service.MatcherTradeEventservice;
+
 
 public class MatchingController {
 	
 	 @Autowired // TODO better service name?
 	  
-	 private Matchingservice matchingService;
+	 private MatcherTradeEventservice matchingService;
 
 	 public void addOrderBook(int symbol) {
 	        orderBook = IOrderBook.newInstance();

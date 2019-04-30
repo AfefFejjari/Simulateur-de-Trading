@@ -3,13 +3,13 @@ package com.example.matching.model;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-import org.apache.commons.lang3.builder.EqualsBuilder;
+
 
 import java.util.Objects;
 
-@AllArgsConstructor
+/*@AllArgsConstructor
 @NoArgsConstructor
-@ToString
+@ToString*/
 public class MatcherTradeEvent {
 
     public MatcherEventType eventType; // TRADE, REDUCE or REJECTION (rare)
@@ -19,7 +19,7 @@ public class MatcherTradeEvent {
     public long activeOrderId;
     public long activeOrderUid;
     public boolean activeOrderCompleted; // false, except when activeOrder is completely filled
-    public OrderAction activeOrderAction; // assume matched order has opposite action
+    public TransactionType activeOrderAction; // assume matched order has opposite action
 //    public long activeOrderSeq;
 
     public long matchedOrderId;
@@ -31,6 +31,13 @@ public class MatcherTradeEvent {
     public long timestamp; // same as activeOrder related event timestamp
 
     
+ // reference to next event in chain
+    public MatcherTradeEvent nextEvent;
+
+
+	
+		
+	}
 
 
   

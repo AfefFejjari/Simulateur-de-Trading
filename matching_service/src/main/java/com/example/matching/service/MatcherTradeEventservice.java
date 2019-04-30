@@ -2,13 +2,16 @@ package com.example.matching.service;
 
 import java.util.Objects;
 
-import com.example.matching.model.EqualsBuilder;
+import com.example.matching.model.MatcherEventType;
 import com.example.matching.model.MatcherTradeEvent;
 
 
-public MatcherTradeEvent nextEvent;
+
 
 public class MatcherTradeEventservice {
+	private MatcherEventType eventType;
+
+
 	public MatcherTradeEvent copy() {
         MatcherTradeEvent evt = new MatcherTradeEvent();
         evt.eventType = this.eventType;

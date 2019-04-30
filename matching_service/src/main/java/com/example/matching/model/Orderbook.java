@@ -2,8 +2,13 @@ package com.example.matching.model;
 
 import java.util.List;
 
-import com.example.Trader_simul.model.Price;
 
+
+import lombok.Getter;
+import lombok.Setter;
+
+
+@Getter @Setter
 public class Orderbook {
 	
 	private List<Order> oderbook;

@@ -1,19 +1,16 @@
 package com.example.matching.model;
 
-import com.google.common.collect.Lists;
+//import com.google.common.collect.Lists;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-import org.openpredict.exchange.beans.MatcherTradeEvent;
-import org.openpredict.exchange.beans.OrderAction;
-import org.openpredict.exchange.beans.OrderType;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
 
-import com.example.matching.model.OrderCommandType.*;
+//import com.example.matching.model.OrderCommandType.*;
 
 @Builder
 @NoArgsConstructor
@@ -29,7 +26,7 @@ public class OrderCommand {
     public long size;
 
    
-    public OrderAction action;
+    public TransactionType action;
     public OrderType orderType;
 
     public long uid;
@@ -46,9 +43,9 @@ public class OrderCommand {
 
    
 
-    public static OrderCommand limitOrder(long orderId, int uid, long price, long size, OrderAction action) {
+    public static OrderCommand limitOrder(long orderId, int uid, long price, long size, TransactionType action) {
         OrderCommand cmd = new OrderCommand();
-        cmd.command = PLACE_ORDER;
+        cmd.command = OrderCommandType.PLACE_ORDER;
         cmd.orderId = orderId;
         cmd.uid = uid;
         cmd.price = price;
@@ -59,9 +56,9 @@ public class OrderCommand {
         return cmd;
     }
 
-    public static OrderCommand marketOrder(long orderId, int uid, long size, OrderAction action) {
+    public static OrderCommand marketOrder(long orderId, int uid, long size, TransactionType action) {
         OrderCommand cmd = new OrderCommand();
-        cmd.command = PLACE_ORDER;
+        cmd.command = OrderCommandType.PLACE_ORDER;
         cmd.orderId = orderId;
         cmd.uid = uid;
         cmd.price = 0;
@@ -75,7 +72,7 @@ public class OrderCommand {
 
     public static OrderCommand cancel(long orderId, int uid) {
         OrderCommand cmd = new OrderCommand();
-        cmd.command = CANCEL_ORDER;
+        cmd.command =OrderCommandType. CANCEL_ORDER;
         cmd.orderId = orderId;
         cmd.uid = uid;
         cmd.resultCode = CommandResultCode.VALID_FOR_MATCHING_ENGINE;
@@ -84,7 +81,7 @@ public class OrderCommand {
 
     public static OrderCommand update(long orderId, int uid, long price, long size) {
         OrderCommand cmd = new OrderCommand();
-        cmd.command = MOVE_ORDER;
+        cmd.command = OrderCommandType.MOVE_ORDER;
         cmd.orderId = orderId;
         cmd.uid = uid;
         cmd.price = price;
