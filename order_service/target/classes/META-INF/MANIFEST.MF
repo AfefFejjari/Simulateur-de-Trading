@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: Trader_simul
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: WIKI
+Implementation-Vendor-Id: com.example
+Build-Jdk: 1.8.0_131
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/Trader_simul
+Created-By: Maven Integration for Eclipse
+
