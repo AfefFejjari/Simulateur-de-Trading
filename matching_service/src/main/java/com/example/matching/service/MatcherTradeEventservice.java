@@ -4,18 +4,21 @@ import java.util.Objects;
 
 import com.example.matching.model.MatcherEventType;
 import com.example.matching.model.MatcherTradeEvent;
+import com.example.matching.model.OrderCommand;
 
 
 
 
 public class MatcherTradeEventservice {
+	
+
 	private MatcherEventType eventType;
-
-
+   
+	public MatcherTradeEvent eventt;
 	public MatcherTradeEvent copy() {
         MatcherTradeEvent evt = new MatcherTradeEvent();
         evt.eventType = this.eventType;
-        evt.activeOrderId = this.activeOrderId;
+        evt.activeOrderId = this.MatcherTradeEvent.activeOrderId;
         evt.activeOrderUid = this.activeOrderUid;
         evt.activeOrderCompleted = this.activeOrderCompleted;
         evt.activeOrderAction = this.activeOrderAction;
@@ -68,3 +71,12 @@ public class MatcherTradeEventservice {
                 nextEvent);
     }
 }
+
+
+OrderCommand cmd = new OrderCommand();
+if (cmd.action= BUY)then
+if (orderbook.order.price=this.cmd.price)then
+if (cmd.size<=orderbook.order.size)then
+order filled
+update order book 
+orderbook.orderprice=orderbook.order.price-prorat

@@ -5,11 +5,11 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 
-import java.util.Objects;
 
-/*@AllArgsConstructor
+
+@AllArgsConstructor
 @NoArgsConstructor
-@ToString*/
+@ToString
 public class MatcherTradeEvent {
 
     public MatcherEventType eventType; // TRADE, REDUCE or REJECTION (rare)
@@ -43,4 +43,3 @@ public class MatcherTradeEvent {
   
    
 
-}

@@ -23,7 +23,7 @@ public class OrderCommand {
     public long orderId;
     public int symbol;
     public long price;  
-    public long size;
+    public long quantity;
 
    
     public TransactionType action;
@@ -43,13 +43,13 @@ public class OrderCommand {
 
    
 
-    public static OrderCommand limitOrder(long orderId, int uid, long price, long size, TransactionType action) {
+    public static OrderCommand limitOrder(long orderId, int uid, long price, long quantity, TransactionType action) {
         OrderCommand cmd = new OrderCommand();
         cmd.command = OrderCommandType.PLACE_ORDER;
         cmd.orderId = orderId;
         cmd.uid = uid;
         cmd.price = price;
-        cmd.size = size;
+        cmd.quantity = quantity;
         cmd.action = action;
         cmd.orderType = OrderType.LIMIT;
         cmd.resultCode = CommandResultCode.VALID_FOR_MATCHING_ENGINE;
@@ -79,13 +79,13 @@ public class OrderCommand {
         return cmd;
     }
 
-    public static OrderCommand update(long orderId, int uid, long price, long size) {
+    public static OrderCommand update(long orderId, int uid, long price, long quantity) {
         OrderCommand cmd = new OrderCommand();
         cmd.command = OrderCommandType.MOVE_ORDER;
         cmd.orderId = orderId;
         cmd.uid = uid;
         cmd.price = price;
-        cmd.size = size;
+        cmd.quantity = quantity;
         cmd.resultCode = CommandResultCode.VALID_FOR_MATCHING_ENGINE;
         return cmd;
     }
@@ -103,7 +103,7 @@ public class OrderCommand {
         List<MatcherTradeEvent> list = new ArrayList<>();
         processMatherEvents(list::add);
         return Lists.reverse(list);
-    }
+           }
 
     // Traverse and remove:
 //    private void cleanMatcherEvents() {
@@ -154,5 +154,13 @@ public class OrderCommand {
         System.out.println(">>> newCmd: " + newCmd);
         return newCmd;
     }
-
+    /*  @param handler - MatcherTradeEvent handler
+    
+   public void processMatherEvents(Consumer<MatcherTradeEvent> handler) {
+       MatcherTradeEvent mte = this.matcherEvent;
+       while (mte != null) {
+           handler.accept(mte);
+           mte = mte.nextEvent;
+       }
+   }*/
 }

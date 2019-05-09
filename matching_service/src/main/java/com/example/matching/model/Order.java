@@ -27,7 +27,8 @@ import lombok.Setter;
 	protected OrderType ordertype; 
 	private Duration duration;
 	private State state;
-	private LocalDateTime date;
+	private LocalDateTime timestamp;
+	private int  prorata;
 
 
 }
